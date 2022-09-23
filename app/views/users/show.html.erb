@@ -22,7 +22,7 @@
   <%= link_to "次月へ ⇨", user_path(date: @first_day.next_month), class: "btn btn-info" %>
 </div>	
 <div>
- ﻿<table class="table table-bordered table-condensed table-hover" id="table-attendances">	
+  <table class="table table-bordered table-condensed table-hover" id="table-attendances">	
     <thead>	
      <tr>	
       <th>日付</th>	
@@ -52,9 +52,9 @@
             <% @total_working_times = @total_working_times.to_f + str_times.to_f %>
           <% end %>
         </td>
-        <td></td>
+        <td><%= day.note %></td>
       </tr>
-      <% end %>
+    <% end %>
     </tbody>
     
     <tfoot>
